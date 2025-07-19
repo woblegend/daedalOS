@@ -17,4 +17,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
         run: |
-          docker login -u wob.legend@hotmail.com -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          using: 'docker'
+          image: 'Dockerfile'
